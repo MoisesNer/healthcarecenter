@@ -1,13 +1,16 @@
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Appointment {
-	
 	private Patient patient;
 	private LocalDate appointmentDate;
-	public Appointment(Patient patient, LocalDate appointmentDate) {
-		super();
+	private LocalTime appointmentTime;
+	
+	public Appointment(Patient patient, LocalDate appointmentDate, LocalTime appointmentTime) {
+//		super();
 		this.patient = patient;
 		this.appointmentDate = appointmentDate;
+		this.appointmentTime = appointmentTime;
 	}
 	/**
 	 * @return the patient
@@ -21,6 +24,10 @@ public class Appointment {
 	public LocalDate getAppointmentDate() {
 		return appointmentDate;
 	}
+	
+	public LocalTime getAppointmentTime() {
+		return appointmentTime;
+	}
 	/**
 	 * @param patient the patient to set
 	 */
@@ -33,8 +40,12 @@ public class Appointment {
 	public void setAppointmentDate(LocalDate appointmentDate) {
 		this.appointmentDate = appointmentDate;
 	}
+	public void setAppointmenTime(LocalTime appointmentTime) {
+		this.appointmentTime = appointmentTime;
+	}
 	
 	public String toString() {
 		return "Patient: " + patient + ". Appointment date: " + appointmentDate;
 	}
+	
 }

@@ -12,7 +12,6 @@ public class Patient {
 	
 	public Patient(int patientID, String firstName, String lastName, String phoneNum, String email, LocalDate dateBirth,
 			char gender) {
-
 		setPatientID(patientID);
 		setFirstName(firstName);
 		setLastName(lastName);
@@ -122,7 +121,6 @@ public class Patient {
 		if(dateBirth.compareTo(d) > 0) {
 			this.dateBirth = dateBirth;
 		} else { this.dateBirth = (d);}
-
 	}
 	/**
 	 * @param gender the gender to set
