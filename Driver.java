@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 public class Driver {
 	
-	public static Doctor checkDoctorId(int doctorId, ArrayList<Doctor> doctors) {
+	public static Doctor checkDoctorId(int id, ArrayList<Doctor> doctors) {
 		for(Doctor d : doctors) {
-			if(d.getDoctorId() == doctorId) {
+			if(d.getId() == id) {
 				return d;
 			}
 		}
@@ -18,7 +18,7 @@ public class Driver {
 	}
 	public static Patient checkPatientId(int patienId, ArrayList<Patient> patients) {
 		for(Patient p : patients) {
-			if(p.getPatientID() == patienId) {
+			if(p.getId() == patienId) {
 				return p;
 			}
 		}
@@ -26,9 +26,9 @@ public class Driver {
 		return null;
 	}
 	
-	public static String listOfAppointment(int doctorId,  ArrayList<Doctor> doctors) {
+	public static String listOfAppointment(int id,  ArrayList<Doctor> doctors) {
 		for(Doctor d : doctors) {
-			if(d.getDoctorId() == doctorId) {
+			if(d.getId() == id) {
 				for (Appointment a : d.getAppointment()) {
 					return "Appointment Date : " + a.getAppointmentDate() +
 							"\nAppointment Time : " + a.getAppointmentTime() + 
